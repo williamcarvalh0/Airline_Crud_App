@@ -25,24 +25,5 @@ exports.bookList = (req,res) => {
 }
 
 exports.add_user = (req,res) => {
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Your work has been saved',
-        showConfirmButton: false,
-        timer: 5000
-      })
-    res.render('index');
-    
-}
-
-exports.update_user = (req,res) => {
-    axios.get('http://localhost:3000/api/users',{params:{id:req.query.id}})
-        .then(function(userData){
-            res.render("update_user", {user: userData.data})
-        })
-        .catch(err => {
-            res.send(err);
-        })
-    res.render('update_user');
+    res.render('index')    
 }

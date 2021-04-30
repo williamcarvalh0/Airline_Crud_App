@@ -7,25 +7,25 @@ const services = require('../services/render');
  *  @description Root Route
  *  @method GET /
  */
- route.get('/', services.add_user);
+route.get('/', services.add_user);
 
 
- /**
-  *  @description add users
-  *  @method GET /add-user
-  */
- route.get('/add-user', services.add_user)
+/**
+ *  @description add users
+ *  @method GET /add-user
+ */
+route.get('/add-user', services.add_user)
+
+/**
+ *  @description for update user
+ *  @method GET /update-user
+ */
+route.get('/book-list', services.bookList)
  
- /**
-  *  @description for update user
-  *  @method GET /update-user
-  */
- route.get('/book-list', services.bookList)
- 
- // API
- route.post('/', controller.create);
- route.get('/', controller.find);
- route.put('/:id', controller.update);
- route.delete('/:id', controller.delete); 
+// API
+route.post('/api/users', controller.create);
+route.get('/api/users', controller.find);
+route.put('/api/users/:id', controller.update);
+route.delete('/api/users/:id', controller.delete);
  
  module.exports = route

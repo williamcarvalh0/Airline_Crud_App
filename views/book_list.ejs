@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William's Airline</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/index.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" id="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">William's Airline</label>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a class="active" href="/book-list">List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- /Header -->
+
+    <!-- Main Site -->
+    <main>
+        <div class="table-container">
+            <h1 class="heading">Booking List</h1>
+            <form action="/api/users/:id" method="DELETE">
+                <table class="table-content">
+                    <thead>
+                        <tr>
+                            <th>Passenger</th>
+                            <th>Departing Date</th>
+                            <th>Class</th>
+                            <th>Destination</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i=0; i<users.length; i++){%>                     
+                            <tr>
+                                <td data-label="Passenger">
+                                    <%= users[i].passenger%>
+                                </td>
+                                <td data-label="Departing Date">
+                                    <%= users[i].departingDate%>
+                                </td>
+                                <td data-label="Class">
+                                    <%= users[i].class%>
+                                </td>
+                                <td data-label="Destination">
+                                    <%= users[i].destination%>
+                                </td>
+                                <td data-label="Price">
+                                    <%= users[i].price%>€
+                                </td>
+                                <td data-label="Action">
+                                    <a class="btn border-shadow delete" data-id=<%=users[i]._id%> >Delete
+                                        <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+    <!-- /Main Site -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/boostrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+
+        $ondelete = $(".table-content tbody td a.delete");
+        $ondelete.click(function () {
+            var id = $(this).attr("data-id")
+
+            var request = {
+                "url": `http://localhost:3000/api/users/${id}`,
+                "method": "DELETE"
+            }
+
+            swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this user",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        $.ajax(request).done(function (response) {
+
+                        })
+                        swal("Poof! User file has been deleted!", {
+                            icon: "success",
+
+                        });
+                    } else {
+                        swal("User file is safe!");
+                    }
+
+                    setTimeout(function () {
+                        window.location.reload(1);
+                    }, 2000);
+                });
+        })
+    </script>
+
+    <!-- Footer Content -->
+    <footer>
+        <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script>, William Carvalho
+        </p>
+    </footer>
+</body>
+
+</html>
