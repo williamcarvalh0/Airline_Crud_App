@@ -1,17 +1,15 @@
 const express = require('express');
-const mongoose = require('mongoose');
-
 const app = express();
 require('dotenv').config();
 const clientRoute = require('./server/routes/router');
 const connectDB = require('./server/database/connection');
+const { connect } = require('./server/routes/router');
 
 const PORT = process.env.PORT || 3000;
 
 //middlewares
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-
 
 //routes
 app.use('/api/clients',clientRoute);
