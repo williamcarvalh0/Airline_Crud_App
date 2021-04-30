@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800");
+@import url("https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic&display=swap");
+
+/*------------ Basic content start ------------*/
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #eae7dc;
+  position: relative;
+  padding-bottom: 58px;
+  min-height: 100vh;
+}
+/*------------- Basic content end -------------*/
+
+
+/*------------- Header content start -------------*/
+header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+.navbar {
+    justify-content: center;
+    padding-top: 15px;
+    background-color: #363F42;
+    height: 110px;
+    width: 100%;
+}
+
+label.logo {
+    font-family: 'Hanalei Fill', cursive;
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+}
+
+.navbar ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.navbar a.active, a:hover {
+    background: #414b4e;
+    transition: .5s;
+}
+
+.navbar #checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.navbar #check {
+    display: none;
+}
+/*-------------- Header content end --------------*/
+
+
+/*---------- Main content start ----------*/
+main {  
+  margin: 50px auto;
+  padding: 30px 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .column {
+  width: 330px;
+  height: 600px;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.container h3 {
+  font-size: 60px;
+  font-family: "Hanalei Fill", cursive;
+}
+
+.container .column:hover {
+  transform: scale(1.05);
+}
+
+.title {
+  background: #d8c3a5;
+  padding: 10px 0;
+}
+
+.title .fa {
+  padding: 0 0 15px;
+  color: white;
+  font-size: 60px;
+}
+
+.title h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.price {
+  padding: 8px;
+}
+
+.price h4 {
+  margin: 0;
+  padding: 0;
+  color: #009688;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.price h4 span {
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.option ul {
+  margin: 0;
+  padding: 0;
+}
+
+.option ul li {
+  list-style: none;
+  padding: 15px 10px;
+  border-bottom: 1 solid rgba(0, 0, 0, 0.05);
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.column .btnStyle {
+  text-decoration: none;
+  padding: 10px 40px;
+  background: #e85a4f;
+  color: #fff;
+  margin: 10px 0 10px;
+  display: inline-block;
+  border-radius: 40px;
+  text-transform: uppercase;
+}
+
+.column:nth-child(2) .title {
+  background: #838d8a;
+}
+
+.column:nth-child(3) .title {
+  background: #e85a4f;
+}
+
+    /*-------------- Table content start --------------*/
+    .table-container {
+      padding: 0 10%;
+      margin: 40px auto 0;
+    }
+
+    .heading {
+      color: #838d8a;
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+      
+    .table-content {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table-content thead {
+      background-color: #e85a4f;
+    }
+
+    .table-content thead tr th {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.35px;
+      color: #fff;
+      opacity: 1;
+      padding: 12px;
+      vertical-align: top;
+      border: 1px solid #fff;
+    }
+
+    .table-content tbody tr td {
+      font-size: 14px;
+      letter-spacing: 0.35px;
+      font-weight: normal;
+      color: #fff;
+      background-color: #838d8a;
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #fff;
+    }
+
+    .table-content tbody tr:hover {
+      background-color: #009688
+    }
+
+    .table-content tbody tr td .btn {
+      width: 90px;
+      text-decoration: none;
+      line-height: 30px;
+      display: inline-block;
+      background-color: #e85a4f;
+      font-weight: medium;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+      user-select: none;
+      border: 1px solid transparent;
+      font-size: 14px;
+      opacity: 1;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+      
+    /*---------- Table content end ----------*/
+
+/*----------- Main content end -----------*/
+
+
+/*----------- Footer content start -----------*/
+  footer {
+    text-align: center;
+    background-color: #363F42;
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+/*------------ Footer content end ------------*/
+
+
+/*----------- Responsive content start -----------*/
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    label.logo {
+        font-size: 30px;  
+        padding-left: 50px;     
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    .navbar ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #414b4e;
+        top: 110px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    .navbar ul li a {
+        font-size: 20px;
+    }
+
+    .navbar a:hover, a.active {
+        background: none;
+        color:  #009688;
+    }
+
+    .navbar #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+@media (max-width: 439px) {    
+
+    .navbar .checkbtn {
+        display: block;
+    }
+
+    .navbar ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #414b4e;
+        top: 110px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    .navbar ul li a {
+        font-size: 20px;
+    }
+
+    .navbar a:hover, a.active {
+        background: none;
+        color:  #009688;
+    }
+
+    .navbar #check:checked ~ ul {
+        left: 0;
+    }
+}
+/*------------ Responsive content end ------------*/
+
+
+/*------------ Responsive table content start ------------*/
+@media (max-width: 768px) {    
+  .table-content thead {
+    display: none;
+  }
+
+  .table-content, .table-content tbody, .table-content tr, .table-content td {
+    display: block;
+    width: 100%;
+  }
+
+  .table-content tr {
+    margin-bottom: 15px;
+  }
+
+  .table-content tbody tr td {
+    text-align: right;
+    padding-right: 20px;
+    position: relative;
+    border-top: 1px solid #fff;
+  }
+
+  .table-content td::before {
+    content: attr(data-label);
+    left: 0;
+    width: 135px;
+    height: 83%;
+    padding-left: 15px;
+    padding-top: 8px;
+    top: 0px;    
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+    background-color: #e85a4f;
+    border-right: 1px solid #fff;
+    position: absolute;
+  }
+}
+/*------------- Responsive table content end -------------*/
