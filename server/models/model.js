@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const yup = require('yup');
 
 var schema = new mongoose.Schema({
     country:{
@@ -28,6 +29,25 @@ var schema = new mongoose.Schema({
     }
 });
 
-const Userdb = mongoose.model('airlinedb',schema);
+const validateUser = (user) => {
+    const schema = yup.object().shape({
+        country:yup.string().required(),
+        passenger:yup.string().required(),
+        departingDate:yup.string().required(),
+        class:yup.string().required(),
+        destination:yup.string().required(),
+        price:yup.number().required()
+    });
 
-module.exports = Userdb;
+    return schema
+    .validate(user)
+    .then(user => user)
+    .catch((error) => {
+        return {
+            message:error.message
+        }
+    });
+}
+
+exports.Userdb = new mongoose.model('airlinedb',schema);
+exports.validateUser = validateUser;

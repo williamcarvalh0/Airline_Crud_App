@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const app = express();
 require('dotenv').config();
 const userRoute = require('./server/routes/router');
+const connectDB = require('./server/database/connection');
 
 const PORT = process.env.PORT || 3000;
 
@@ -14,15 +15,7 @@ app.use(express.urlencoded({extended:true}));
 app.use('/api/users',userRoute);
 
 //connect to mongodb
-mongoose.connect(
-    process.env.MONGO_URL,
-    {useNewUrlParser:true}
-)
-.then(() => {
-    console.log("Connected to mongodb ")
-}).catch(error => {
-    console.log("Something wrong happened",error);
-});
+connectDB();
 
 //start server
 app.listen(PORT,() => {
