@@ -27,3 +27,4 @@ exports.bookList = (req,res) => {
 exports.add_user = (req,res) => {
     res.render('index')    
 }
+
