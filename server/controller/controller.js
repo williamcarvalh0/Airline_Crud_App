@@ -34,3 +34,9 @@ exports.find = ("/",(req,res) => {
     });
 });
 
+//DELETE CLIENT BY ID
+exports.delete = ('/:id', async (req,res) => {
+    const client = await ClientDB.findByIdAndRemove(req.params.id);
+    if(!client) res.status(404).send("Client was not found");
+    res.send(client);
+});
