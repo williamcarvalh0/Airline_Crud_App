@@ -17,8 +17,8 @@ route.get('/', services.add_user);
 route.get('/add-user', services.add_user)
 
 /**
- *  @description for update user
- *  @method GET /update-user
+ *  @description for load user
+ *  @method GET /load-user
  */
 route.get('/book-list', services.bookList)
  
