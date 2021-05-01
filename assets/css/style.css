@@ -332,45 +332,26 @@ footer {
   }
 }
 
-@media (max-width: 472px) {
+@media (max-width: 474px) {
+  label.logo {
+    font-size: 27px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 431px) {
   label.logo {
     font-size: 25px;
-    padding-left: 30px;
+    padding: 0;
+    padding-left: 20px;
   }
+}
 
-  .navbar .checkbtn {
-    display: block;
-  }
-
-  .navbar ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #414b4e;
-    top: 110px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-
-  .navbar ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-
-  .navbar ul li a {
-    font-size: 20px;
-  }
-
-  .navbar a:hover,
-  a.active {
-    background: none;
-    color: #009688;
-  }
-
-  .navbar #check:checked~ul {
-    left: 0;
+@media (max-width: 375px) {
+  label.logo {
+    font-size: 23px;
+    padding: 0;
+    padding-left: 15px;
   }
 }
 
