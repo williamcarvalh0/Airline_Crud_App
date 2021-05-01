@@ -401,3 +401,25 @@ footer {
 }
 
 /*------------- Responsive table content end -------------*/
+
+#img1 {
+  padding: 10px;
+  font-size: 28px;
+  color: white;
+  height: 100px;
+  position: absolute;
+}
+
+#img1 {
+  top: 0%;
+  transform: translate(-0);
+  animation: images 8s ease infinite;
+}
+
+@keyframes images {
+  from {
+      left: 0%;
+  } to {
+      left: 130%;
+  }
+}
