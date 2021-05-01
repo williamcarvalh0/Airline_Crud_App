@@ -4,7 +4,7 @@ const Swal = require('sweetalert2');
 
 exports.homeRoutes = (req,res) => {
     //make a get request to /api/users
-    axios.get('http://localhost:3000/api/users')
+    axios.get('https://airline-crud-app.herokuapp.com/api/users')
         .then(function(response){
             res.render('index',{users:response.data});
         })
@@ -15,7 +15,7 @@ exports.homeRoutes = (req,res) => {
 
 exports.bookList = (req,res) => {
     //make a get request to /api/users
-    axios.get('http://localhost:3000/api/users')
+    axios.get('https://airline-crud-app.herokuapp.com/api/users')
         .then(function(response){
             res.render('book_list',{users:response.data});
         })
