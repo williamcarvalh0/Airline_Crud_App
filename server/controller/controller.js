@@ -33,33 +33,3 @@ exports.find = ("/",(req,res) => {
         res.status(500).send("Something went wrong");
     });
 });
-
-//GET: CLIENT BY ID
-exports.findById =("/:id", async (req,res) => {
-   const client = await ClientDB.findById(req.params.id);
-   if(!client) res.status(404).send("Client not found");
-   res.send(client); 
-});
-
-//UPDATE CLIENT BY ID
-exports.update = ('/:id', async (req,res) =>{
-    const updateClient = await ClientDB.findByIdAndUpdate(req.params.id, {
-        country : req.body.country,
-        passenger : req.body.passenger,
-        departingDate: req.body.departingDate,
-        class : req.body.class,
-        destination : req.body.destination,
-    },
-    {new:true}
-    );
-
-    if(!updateClient) res.status(404).send("Client not found");
-    res.send(updateClient);
-});
-
-//DELETE CLIENT BY ID
-exports.delete = ('/:id', async (req,res) => {
-    const client = await ClientDB.findByIdAndRemove(req.params.id);
-    if(!client) res.status(404).send("Client was not found");
-    res.send(client);
-});
