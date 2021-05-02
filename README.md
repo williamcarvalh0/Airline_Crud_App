@@ -45,8 +45,6 @@ Color scheme. [online] available at: https://visme.co/blog/website-color-schemes
 [Accessed: 30 April 2021].
 
 ---
-
----
 ## Heroku Link 
 https://airline-crud-app.herokuapp.com/
 
