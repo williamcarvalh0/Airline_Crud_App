@@ -1,13 +1,13 @@
 # Airline_Crud_App
 
-name: William Leonardo da Silva Carvalho
+Author: William Leonardo da Silva Carvalho
 
 ---
-** Initial Ideias**
+## Initial Ideias
 To create a simple API that could be able to insert data to database (mongodb) and also to delete data, and deploy it on Heroku.
 
 ---
-** Interactive Web Applications CA2 **
+## Interactive Web Applications CA2
 - API service created wtih Node.js, mongoDB and deployed on Heroku that supports full 
 CRUD for your existing CA1 app
 
@@ -26,9 +26,9 @@ appropriate modules.
 ---
 ## Problems occurred/solutions
 
-1 - nav bar was not responsive / I went to w3school and saw a few examples how to do it and solved it.
-2 - when you select some text in the browsers it is highlighted normally in blue color. / disable this highlighting with the CSS
-3 - when I was trying to deploy it in  EU area I could not get it deployed, I dont know why is that but I had to deploy it on US area.
+- 1 - nav bar was not responsive / I went to w3school and saw a few examples how to do it and solved it.
+- 2 - when you select some text in the browsers it is highlighted normally in blue color. / disable this highlighting with the CSS
+- 3 - when I was trying to deploy it in  EU area I could not get it deployed, I dont know why is that but I had to deploy it on US area.
 
 ---
 ## References
