@@ -19,7 +19,7 @@ exports.create = ('/',async (req,res) => {
     client
     .save()
     .then(client => {
-        res.redirect('/add-user');
+        res.redirect('/book-list');
     }).catch(error => {
         res.status(500).send(`${req.body.passenger} was not stored in database because this client already exists!`);
     });
