@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const yup = require('yup');
+const Swal = require('sweetalert2')
 
 var schema = new mongoose.Schema({
     country:{
@@ -43,9 +44,13 @@ const validateClient = (client) => {
     .validate(client)
     .then(client => client)
     .catch((error) => {
-        return {
-            message:error.message
-        }
+        return (
+            Swal({
+                title: "Good job!",
+                text: "You clicked the button!",
+                icon: "error",
+              })
+        );
     });
 }
 
