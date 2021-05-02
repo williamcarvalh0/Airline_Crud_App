@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William's Airline</title>
 
-    <link href="/css/bootstrap.min.css" rel="stylesheet"></link>
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/59c3cb47db.js"></script>
@@ -25,6 +25,7 @@
             </label>
             <label class="logo">William's Airline</label>
             <i  id="img1" class="fas fa-fighter-jet"></i>
+            <i  id="img2" class="fas fa-fighter-jet" style="transform: scaleX(-1);"></i>
             <ul>
                 <li><a class="active" href="/">Home</a></li>
                 <li><a href="/book-list">List</a></li>
@@ -36,6 +37,7 @@
 
     <!-- Page Content -->
     <main>
+        <h1 class="heading">Book a Flight</h1>
         <div class="container">
             <div class="column">
                 <div class="title">
@@ -50,15 +52,15 @@
                         <form action="/api/users" method="POST">
                             <div class="form-group">
                                 <li>
-                                    <input class="form-control text-center" type="text" name="passenger"
+                                    <input class="form-field" type="text" name="passenger"
                                         placeholder="Passenger Name">
                                 </li>
                                 <li>
-                                    <input class="form-control text-center" type="date" name="departingDate"
+                                    <input class="form-field" type="date" name="departingDate"
                                         placeholder="Departing Date">
                                 </li>
                                 <li>
-                                    <select class="form-control text-center" name="country">
+                                    <select class="form-field" name="country">
                                         <option value="">Select Country</option>
                                         <option value="England">England</option>
                                         <option value="France">France</option>
@@ -66,11 +68,11 @@
                                     </select>
                                 </li>
                                 <li>
-                                    <input class="form-control text-center" type="hidden" value="Economy Class"
+                                    <input class="form-field" type="hidden" value="Economy Class"
                                         name="class">
-                                    <input class="form-control text-center" type="hidden" value="23.99" name="price">
-                                    <input class="form-control text-center" type="text" name="destination"
-                                        placeholder="Destination Name">
+                                    <input class="form-field" type="hidden" value="23.99" name="price">
+                                    <input class="form-field" type="text" name="destination"
+                                        placeholder="Destination City">
                                 </li>
                             </div>
                             <button class="btnStyle" type="submit">Book Now</button>
@@ -92,15 +94,15 @@
                         <form action="/api/users" method="POST">
                             <div class="form-group">
                                 <li>
-                                    <input class="form-control text-center" type="text" name="passenger"
+                                    <input class="form-field" type="text" name="passenger"
                                         placeholder="Passenger Name">
                                 </li>
                                 <li>
-                                    <input class="form-control text-center" type="date" name="departingDate"
+                                    <input class="form-field" type="date" name="departingDate"
                                         placeholder="Departing Date">
                                 </li>
                                 <li>
-                                    <select class="form-control text-center" name="country">
+                                    <select class="form-field" name="country">
                                         <option value="">Select Country</option>
                                         <option value="England">England</option>
                                         <option value="France">France</option>
@@ -108,11 +110,11 @@
                                     </select>
                                 </li>
                                 <li>
-                                    <input class="form-control text-center" type="hidden" value="Business Class"
+                                    <input class="form-field" type="hidden" value="Business Class"
                                         name="class">
-                                    <input class="form-control text-center" type="hidden" value="47.99" name="price">
-                                    <input class="form-control text-center" type="text" name="destination"
-                                        placeholder="Destination Name">
+                                    <input class="form-field" type="hidden" value="47.99" name="price">
+                                    <input class="form-field" type="text" name="destination"
+                                        placeholder="Destination City">
                                 </li>
                             </div>
                             <button class="btnStyle" type="submit">Book Now</button>
@@ -134,27 +136,27 @@
                         <form action="/api/users" method="POST">
                             <div class="form-group">
                                 <li>
-                                    <input class="form-control text-center" type="text" name="passenger"
+                                    <input class="form-field" type="text" name="passenger"
                                         placeholder="Passenger Name">
                                 </li>
                                 <li>
-                                    <input class="form-control text-center" type="date" name="departingDate"
+                                    <input class="form-field" type="date" name="departingDate"
                                         placeholder="Departing Date">
                                 </li>
                                 <li>
-                                    <select class="form-control text-center" name="country">
+                                    <select class="form-field" name="country">
                                         <option value="">Select Country</option>
-                                        <option value="England">England</option>
-                                        <option value="France">France</option>
-                                        <option value="Spain">Spain</option>
+                                        <option id="England" value="England">England</option>
+                                        <option id="France"  value="France">France</option>
+                                        <option id="Spain"  value="Spain">Spain</option>
                                     </select>
                                 </li>
                                 <li>
-                                    <input class="form-control text-center" type="hidden" value="First Class"
+                                    <input class="form-field" type="hidden" value="First Class"
                                         name="class">
-                                    <input class="form-control text-center" type="hidden" value="89.99" name="price">
-                                    <input class="form-control text-center" type="text" name="destination"
-                                        placeholder="Destination Name">
+                                    <input class="form-field" type="hidden" value="89.99" name="price">
+                                    <input class="form-field" type="text" name="destination"
+                                        placeholder="Destination City">
                                 </li>
                             </div>
                             <button class="btnStyle" type="submit">Book Now</button>

@@ -90,11 +90,12 @@ a:hover {
 
 /*---------- Main content start ----------*/
 main {
-  margin: 50px auto;
+  margin: 110px auto;
   padding: 30px 20px;
+  z-index: 1;
 }
 
-.container {
+.container {  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -102,6 +103,7 @@ main {
 }
 
 .container .column {
+  background-color: #eef0ef;
   width: 330px;
   height: 600px;
   text-align: center;
@@ -142,6 +144,32 @@ main {
   color: white;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.form-field {
+  width: 250px; 
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #676767;
+  transition: border 0.5s;
+  -webkit-transition: border 0.5s;
+  -moz-transition: border 0.5s;
+  -o-transition: border 0.5s;
+  border: solid 1px #7c858a;  
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+.form-field option {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .price {
@@ -200,10 +228,12 @@ main {
 }
 
 .heading {
-  color: #838d8a;
-  font-size: 40px;
+  color: #414b4e;
   text-align: center;
   margin-bottom: 40px;
+  font-family: Georgia, sans-serif;
+  font-size: 5em;
+  letter-spacing: -2px;
 }
 
 .table-content {
@@ -231,7 +261,7 @@ main {
   letter-spacing: 0.35px;
   font-weight: normal;
   color: #fff;
-  background-color: #838d8a;
+  background-color: #585858;
   padding: 8px;
   text-align: center;
   border: 1px solid #fff;
@@ -242,7 +272,7 @@ main {
 }
 
 .table-content tbody tr td .btn {
-  width: 90px;
+  width: 70px;
   text-decoration: none;
   line-height: 30px;
   display: inline-block;
@@ -300,6 +330,10 @@ footer {
     display: block;
   }
 
+  .heading {
+    font-size: 3.5em;
+  }
+
   .navbar ul {
     position: fixed;
     width: 100%;
@@ -332,27 +366,17 @@ footer {
   }
 }
 
-@media (max-width: 474px) {
+@media (max-width: 440px) {
   label.logo {
     font-size: 27px;
-    padding-left: 20px;
-  }
-}
-
-@media (max-width: 431px) {
-  label.logo {
-    font-size: 25px;
-    padding: 0;
-    padding-left: 20px;
-  }
-}
-
-@media (max-width: 375px) {
-  label.logo {
-    font-size: 23px;
     padding: 0;
     padding-left: 15px;
   }
+
+  .heading {
+    font-size: 3em;
+  }
+
 }
 
 /*------------ Responsive content end ------------*/
@@ -378,7 +402,7 @@ footer {
 
   .table-content tbody tr td {
     text-align: right;
-    padding-right: 20px;
+    padding-right: 15px;
     position: relative;
     border-top: 1px solid #fff;
   }
@@ -386,9 +410,9 @@ footer {
   .table-content td::before {
     content: attr(data-label);
     left: 0;
-    width: 135px;
+    width: 120px;
     height: 83%;
-    padding-left: 15px;
+    padding-left: 10px;
     padding-top: 8px;
     top: 0px;
     font-weight: 600;
@@ -413,13 +437,35 @@ footer {
 #img1 {
   top: 0%;
   transform: translate(-0);
-  animation: images 8s ease infinite;
+  animation: img1 15s ease infinite;
 }
 
-@keyframes images {
+@keyframes img1 {
   from {
       left: 0%;
   } to {
       left: 130%;
+  }
+}
+
+#img2 {
+  padding: 10px;
+  font-size: 28px;
+  color: white;
+  height: 100px;
+  position: absolute;
+}
+
+#img2 {
+  top: 60%;
+  transform: translate(-0);
+  animation: img2 30s ease infinite;
+}
+
+@keyframes img2 {
+  from {
+      right: 0%;
+  } to {
+      right: 130%;
   }
 }
